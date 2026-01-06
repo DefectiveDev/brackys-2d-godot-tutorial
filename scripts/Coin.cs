@@ -7,6 +7,6 @@ public partial class Coin : Area2D
     private void OnBodyEntered(Node2D body)
     {
         GetNode<GameManager>("%GameManager").AddPoint();
-        QueueFree();
+        GetNode<AnimationPlayer>("AnimationPlayer").Play("pickup");
     }
 }

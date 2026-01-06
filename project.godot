@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="Brackey's Godot Turtorial"
+config/tags=PackedStringArray("finished")
 run/main_scene="uid://gbyhabfv6hpv"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("finished")
 
 [autoload]
 

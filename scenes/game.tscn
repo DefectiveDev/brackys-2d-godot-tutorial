@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://gbyhabfv6hpv"]
+[gd_scene load_steps=15 format=4 uid="uid://gbyhabfv6hpv"]
 
+[ext_resource type="Script" uid="uid://bjbb7it50ebj5" path="res://scripts/GameManager.cs" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://8eyjhnwma073" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://od65kwukjy17" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cgel5f5frudhu" path="res://scenes/platform.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dtae68ssy8ssj" path="res://scenes/kill_zone.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://ct7k4mwk84s6r" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://4wtshss2tyq0" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://c3tceth1yyf5k" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -215,6 +217,9 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_gee14")
+
 [node name="TileMap" type="Node" parent="."]
 
 [node name="Back-TileMapLayer2" type="TileMapLayer" parent="TileMap"]
@@ -283,9 +288,24 @@ position = Vector2(632, 80)
 [node name="Slime2" parent="Slimes" instance=ExtResource("6_p57ef")]
 position = Vector2(134, 78)
 
-[node name="Label" type="Label" parent="."]
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
 offset_left = 18.0
 offset_top = 12.0
 offset_right = 105.0
 offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
 text = "Up to Jump"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 434.0
+offset_top = 77.0
+offset_right = 521.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts"

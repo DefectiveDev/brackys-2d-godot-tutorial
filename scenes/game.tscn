@@ -222,6 +222,18 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 718.0
+offset_top = 16.0
+offset_right = 805.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
+theme_override_fonts/font = ExtResource("9_0tnpc")
+theme_override_font_sizes/font_size = 8
+text = "The coins you collected are X"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="TileMap" type="Node" parent="."]
 
 [node name="Back-TileMapLayer2" type="TileMapLayer" parent="TileMap"]
@@ -321,15 +333,3 @@ theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "You made it!"
-
-[node name="Label4" type="Label" parent="Labels"]
-offset_left = 718.0
-offset_top = 16.0
-offset_right = 805.0
-offset_bottom = 39.0
-theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
-theme_override_fonts/font = ExtResource("9_0tnpc")
-theme_override_font_sizes/font_size = 8
-text = "The coins you collected are X"
-horizontal_alignment = 1
-autowrap_mode = 2

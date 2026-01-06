@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Brackey's Godot Turtorial"
+run/main_scene="uid://gbyhabfv6hpv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Brackey-s Godot Turtorial"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

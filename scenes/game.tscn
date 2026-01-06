@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://gbyhabfv6hpv"]
+[gd_scene load_steps=10 format=4 uid="uid://gbyhabfv6hpv"]
 
 [ext_resource type="PackedScene" uid="uid://8eyjhnwma073" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://od65kwukjy17" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cgel5f5frudhu" path="res://scenes/platform.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ct7k4mwk84s6r" path="res://scenes/coin.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -233,3 +234,18 @@ libraries = {
 &"": SubResource("AnimationLibrary_iywne")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(119, 70)
+
+[node name="Coin2" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(264, 71)
+
+[node name="Coin3" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(281, 71)
+
+[node name="Coin4" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(392, 41)
+
+[node name="Coin5" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(617, 73)

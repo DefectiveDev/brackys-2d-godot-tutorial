@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://gbyhabfv6hpv"]
+[gd_scene load_steps=16 format=4 uid="uid://gbyhabfv6hpv"]
 
 [ext_resource type="Script" uid="uid://bjbb7it50ebj5" path="res://scripts/GameManager.cs" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://8eyjhnwma073" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ct7k4mwk84s6r" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://4wtshss2tyq0" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://c3tceth1yyf5k" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://cfgpxstyiupc4" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -218,6 +219,7 @@ _data = {
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
 [node name="TileMap" type="Node" parent="."]
@@ -309,3 +311,25 @@ theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Falling hurts"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 719.0
+offset_top = 1.0
+offset_right = 806.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "You made it!"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 718.0
+offset_top = 16.0
+offset_right = 805.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.29803923, 0.6901961, 0.89411765, 1)
+theme_override_fonts/font = ExtResource("9_0tnpc")
+theme_override_font_sizes/font_size = 8
+text = "The coins you collected are X"
+horizontal_alignment = 1
+autowrap_mode = 2
